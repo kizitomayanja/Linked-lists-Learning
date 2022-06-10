@@ -6,7 +6,6 @@ struct node
 {
     int value;
     struct node *next;
-
 };
 
 void bubble_sort(struct node *head_ref, int direction)
@@ -170,10 +169,11 @@ putchar('\n');
     {
         printf("\n%d does not exist... sorry",n);
     }
-    printf("\nWhat order would you like to sort the linked list into. \n1. Ascending...\n2.Descending...  ");
+    printf("\n\nWhat order would you like to sort the linked list into. \n1. Ascending...\n0.Descending...  ");
     int direction;
     scanf("%d", &direction);
     bubble_sort(head, direction);
+    putchar('\n');
     printlinkedlist(head);
 
 
